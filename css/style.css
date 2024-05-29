@@ -1,4 +1,5 @@
 /****** General ***********/
+/* Apply styles to all elements */
 * {
   font-family: "Raleway", sans-serif;
   margin: 0;
@@ -7,6 +8,7 @@
   list-style: none;
 }
 
+/* Define CSS variables for reuse */
 :root {
   --main-color: #0065fc;
   --main-bg-color: #f2f2f2;
@@ -20,32 +22,40 @@
   --transition: all 0.2s ease-in;
 }
 
+/* Font Awesome icon color */
 .fa-solid {
   color: var(--main-color);
 }
 
+/* Style the body to center content */
 body {
   display: flex;
   justify-content: center;
 }
+
 /****** Logo ***********/
+/* Center the logo vertically and horizontally */
 .logo {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 79px;
 }
+
+/* Set logo image height */
 .logo img {
   height: 20px;
 }
 
 /****** NavBar ***********/
-
+/* Define grid layout for navbar */
 .navbar ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 36px;
 }
+
+/* Style navbar list items */
 .navbar li {
   margin: auto;
   font-size: var(--text-md);
@@ -55,30 +65,40 @@ body {
   height: 100%;
   border-bottom: solid 2px var(--main-bg-color);
 }
+
+/* Hover effect for navbar list items */
 .navbar li:hover {
   color: var(--main-color);
   border-color: var(--main-color);
 }
+
 /****** info-group ***********/
+/* Set margin for info group */
 .info-group {
   margin: 20px;
 }
 
+/* Style for headline text */
 .headline h1 {
   font-size: var(--text-xl);
   font-weight: 700;
   margin-bottom: 8px;
 }
+
+/* Style for headline paragraph */
 .headline p {
   font-size: var(--text-md);
   margin-top: 8px;
 }
+
+/* Flex container for info bar */
 .info-bar {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
+/* Style for icons in info bar */
 .info-bar i {
   display: flex;
   align-items: center; /* Vertically center */
@@ -90,7 +110,9 @@ body {
   text-align: center;
   font-size: 10px;
 }
+
 /****** search-bar ***********/
+/* Flex container for search bar */
 .search-bar {
   display: flex;
   align-items: center;
@@ -100,10 +122,14 @@ body {
   border-radius: 15px;
   height: 50px;
 }
+
+/* Style for search bar buttons */
 .search-bar button {
   height: 50px;
   width: 50px;
 }
+
+/* Style for search bar input */
 .search-bar input {
   border: none;
   height: 100%;
@@ -114,35 +140,48 @@ body {
   padding-left: 20px;
 }
 
+/* Style for the first search bar button */
 .search-bar button:first-child {
   border: solid 2px var(--main-bg-color);
   border-radius: 15px 0 0 15px;
 }
 
+/* Style for the last search bar button */
 .search-bar button:last-child {
   border: solid 1px var(--main-color);
   border-radius: 15px;
   background-color: var(--main-color);
-
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
 }
+
+/* Font size for icons in the search bar */
 .search-bar i {
   font-size: 17px;
 }
+
+/* Color for the first search bar button icon */
 .search-bar button:first-child i {
   color: black;
 }
+
+/* Color for the last search bar button icon */
 .search-bar button:last-child i {
   color: white;
 }
+
+/* Hide text span inside the last search bar button */
 .search-bar button:last-child span {
   display: none;
 }
+
 /****** filter-bar ***********/
+/* Style for filter bar title */
 .filter-bar h2 {
   font-size: var(--text-lg);
   font-weight: 700;
 }
+
+/* Grid layout for filter buttons */
 .filter {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -151,6 +190,7 @@ body {
   margin: 20px 0;
 }
 
+/* Style for filter buttons */
 .filter button {
   display: flex;
   font-size: var(--text-sm);
@@ -159,24 +199,27 @@ body {
   align-items: center;
   justify-content: start;
   gap: 10px;
-
   border: solid 2px var(--btn-border-color);
   border-radius: 25px;
   padding: 10px 19px;
   transition: all 0.2s;
 }
 
+/* Hover effect for filter buttons */
 .filter button:hover {
   transform: scale(1.01);
   background-color: var(--filter-bg-color);
 }
+
+/* Font size for icons in filter buttons */
 .filter i {
   font-size: 20px;
   width: 22px;
   text-align: center;
 }
-/**/
 
+/****** Main container ***********/
+/* Style for the main container */
 .main-container {
   width: 100%;
   max-width: 1440px;
@@ -184,16 +227,20 @@ body {
   overflow: hidden;
 }
 
+/* Default style for anchor tags */
 a {
   color: inherit;
   text-decoration: none;
 }
 
+/* Style for section titles */
 .section-title {
   margin: 0;
   font-size: var(--text-xl);
 }
 
+/****** Card ***********/
+/* Style for card elements */
 .card {
   background-color: white;
   border-radius: 20px;
@@ -202,47 +249,58 @@ a {
   transition: all 0.2s;
 }
 
+/* Hover effect for cards */
 .card:hover {
   transform: scale(1.01);
   background-color: var(--filter-bg-color);
 }
 
+/* Style for images inside cards */
 .card img {
   object-fit: cover;
 }
 
+/* Style for card titles */
 .card-title {
   font-size: 16px;
 }
 
+/* Style for euro text */
 .euro {
   font-weight: 700;
 }
 
+/* Style for neutral star icons */
 .neutral-star {
   color: var(--main-bg-color);
 }
 
 /****** Hebergements And Populaires ***********/
+/* Style for hebergements and populaires sections */
 .hebergements-and-populaires {
   display: flex;
   flex-direction: column-reverse;
   gap: 40px;
 }
 
+/* Style for sections inside hebergements-and-populaires */
 .hebergements-and-populaires section {
   box-sizing: border-box;
 }
 
-/****** Hebergements et Activités***********/
+/****** Hebergements et Activités ***********/
+/* Style for hebergements section */
 .hebergements {
   background-color: white;
   padding: 20px;
 }
+
+/* Margin for cards inside hebergements section */
 .hebergements-cards .card {
   margin-top: 18px;
 }
 
+/* Style for images inside hebergements cards */
 .hebergements-cards img {
   width: 100%;
   height: 124px;
@@ -250,41 +308,48 @@ a {
   border-top-right-radius: 20px;
 }
 
+/* Padding for card content inside hebergements */
 .hebergements-cards .card-content {
   padding-left: 10px;
   box-sizing: border-box;
 }
 
+/* Margin for card titles inside hebergements */
 .hebergements-cards .card-title {
   margin-bottom: 4px;
 }
 
+/* Margin for card subtitles inside hebergements */
 .hebergements-cards .card-subtitle {
   margin: 0;
 }
 
+/* Margin for card ratings inside hebergements */
 .hebergements-cards .card-rating {
   margin-bottom: 5px;
 }
 
 /****** Populaires ***********/
+/* Style for populaires section */
 .populaires {
   padding: 20px;
-
   background-color: var(--main-bg-color);
 }
 
+/* Style for title inside populaires section */
 .populaires-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* Style for cards inside populaires section */
 .populaires-cards .card {
   display: flex;
   margin-top: 14px;
 }
 
+/* Style for images inside populaires cards */
 .populaires-cards img {
   width: 33%;
   height: 136px;
@@ -292,6 +357,7 @@ a {
   border-bottom-left-radius: 20px;
 }
 
+/* Padding for card content inside populaires */
 .populaires-cards .card-content {
   padding-left: 15px;
   display: flex;
@@ -300,19 +366,24 @@ a {
   box-sizing: border-box;
 }
 
+/* Margin for card titles inside populaires */
 .populaires-cards .card-title {
   margin-top: 10px;
   margin-bottom: 4px;
 }
 
+/* Margin for card subtitles inside populaires */
 .populaires-cards .card-subtitle {
   margin: 0;
 }
 
+/* Margin for card ratings inside populaires */
 .populaires-cards .card-rating {
   margin-bottom: 5px;
 }
-/****** activités ******/
+
+/****** Activités ***********/
+/* Style for activités section */
 .activités {
   width: 100%;
   background-color: white;
@@ -320,10 +391,13 @@ a {
   margin: 40px 0;
   box-sizing: border-box;
 }
+
+/* Margin for cards inside activités section */
 .activités-cards .card {
   margin-top: 18px;
 }
 
+/* Style for images inside activités cards */
 .activités-cards img {
   width: 100%;
   height: 124px;
@@ -331,35 +405,41 @@ a {
   border-top-right-radius: 20px;
 }
 
+/* Padding for card content inside activités */
 .activités-cards .card-content {
   padding-left: 15px;
   box-sizing: border-box;
 }
 
+/* Margin and line-height for card titles inside activités */
 .activités-cards .card-title {
   margin-bottom: 4px;
   line-height: 3;
 }
+
+/****** Footer ***********/
+/* Style for footer section */
 footer {
   padding: var(--margin-main);
   line-height: 1.8;
   background-color: var(--main-bg-color);
 }
 
+/* Margin for sections inside footer */
 footer section:not(:last-child) {
   margin-bottom: 20px;
 }
 
+/* Style for list items inside footer */
 footer li {
   font-size: var(--text-lg);
   transition: all 0.2s;
 }
 
+/* Hover effect for list items inside footer */
 footer li:hover {
   font-weight: bold;
 }
-
-/* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
 /* Medium devices */
@@ -368,110 +448,151 @@ footer li:hover {
     padding: 0 40px;
     margin-top: -30px;
   }
+
+  /* Flex container for header */
   header {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+
+  /* Margin for logo on medium devices */
   .logo {
     margin-top: 20px;
   }
+
+  /* Style for navbar list items on medium devices */
   .navbar li {
     border-bottom: 0;
     border-top: solid 2px var(--main-bg-color);
     padding-top: 15px;
   }
+
+  /* Margin for info group on medium devices */
   .info-group {
     margin: 20px 0;
   }
 
+  /* Width for search bar on medium devices */
   .search-bar {
     width: 38%;
     min-width: 377px;
   }
+
+  /* Width for search bar input on medium devices */
   .search-bar input {
     width: calc(100% - (182px));
   }
 
+  /* Width and padding for last search bar button on medium devices */
   .search-bar button:last-child {
     width: 132px;
     border-radius: 0 15px 15px 0;
     padding: 0 20px;
   }
+
+  /* Hide icon inside last search bar button on medium devices */
   .search-bar button:last-child i {
     display: none;
   }
+
+  /* Display text span inside last search bar button on medium devices */
   .search-bar button:last-child span {
     display: contents;
     color: white;
     font-weight: 700;
   }
 
+  /* Flex layout for filter section on medium devices */
   .filter {
     display: flex;
   }
 
+  /* Column layout for hebergements-and-populaires on medium devices */
   .hebergements-and-populaires {
     flex-flow: column;
   }
 
+  /* Background and border radius for hebergements section on medium devices */
   .hebergements {
     background-color: var(--main-bg-color);
     border-radius: 15px;
   }
+
+  /* Grid layout for hebergements cards on medium devices */
   .hebergements-cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 15px;
   }
+
+  /* Border radius for populaires section on medium devices */
   .populaires {
     border-radius: 15px;
   }
 
+  /* Grid layout for populaires cards on medium devices */
   .populaires-cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 15px;
   }
+
+  /* Grid layout for activités cards on medium devices */
   .activités-cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 15px;
   }
+
+  /* Height for activités cards on medium devices */
   .activités-cards .card {
     height: 270px;
   }
+
+  /* Height for images inside activités cards on medium devices */
   .activités-cards img {
     height: 200px;
   }
 
+  /* Align card content vertically inside activités cards on medium devices */
   .activités-cards .card-content {
     display: flex;
     align-items: center;
     height: 70px;
   }
 
+  /* Line height for card titles inside activités cards on medium devices */
   .activités-cards .card-title {
     line-height: normal;
   }
+
+  /* Grid layout for footer on medium devices */
   footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
 /* Large devices */
 @media screen and (min-width: 1440px) {
+  /* Grid layout for hebergements-and-populaires on large devices */
   .hebergements-and-populaires {
     display: grid;
     grid-template-columns: 2fr 1fr;
   }
+
+  /* Block layout for populaires cards on large devices */
   .populaires-cards {
     display: block;
   }
 
+  /* Height for activités cards on large devices */
   .activités-cards .card {
     height: 439px;
   }
+
+  /* Height for images inside activités cards on large devices */
   .activités-cards .card img {
     height: 380px;
   }
