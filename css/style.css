@@ -295,6 +295,10 @@ a {
   padding: 20px;
 }
 
+.hebergements-btn {
+  display: none;
+}
+
 /* Margin for cards inside hebergements section */
 .hebergements-cards .card {
   margin-top: 18px;
@@ -517,6 +521,11 @@ footer li:hover {
   .hebergements {
     background-color: var(--main-bg-color);
     border-radius: 15px;
+  }
+  .hebergements-btn {
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 10px;
   }
 
   /* Grid layout for hebergements cards on medium devices */
