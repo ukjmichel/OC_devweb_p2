@@ -222,7 +222,7 @@ body {
 /* Style for the main container */
 .main-container {
   width: 100%;
-  max-width: 1440px;
+  max-width: 1360px;
   box-sizing: border-box;
   overflow: hidden;
 }
